@@ -17,10 +17,10 @@ inquirer.prompt(questions).then(async ({ years }) => {
 		if (!(+year <= 1500 && +year >= 1280)) {
 			throw new Error({
 				code: "YEAR_VALIDATION",
-				message: `Input year does not in range of support. year must grather than 1280 and less than 1500, input year => ${year}`,
+				message: `Input year does not in range of support. year must greater than 1280 and less than 1500, input year => ${year}`,
 			})
 		}
 	})
 	if (yParse.length) await crawlTimeIr(yParse, true)
-	if (true) yParse.map(year => buildICS(year))
+	yParse.map(year => buildICS(year))
 })
